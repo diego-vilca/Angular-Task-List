@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Task } from '../../Task'
 import { TASK } from '../../mock-task'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'; //font awesome
 
 @Component({
   selector: 'app-tasks-item',
@@ -10,4 +11,6 @@ import { TASK } from '../../mock-task'
 export class TasksItemComponent {
   @Input()
   task: Task = TASK[0];
+  
+  faTimes = faTimes; //font awesome
 }
