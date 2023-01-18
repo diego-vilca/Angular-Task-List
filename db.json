@@ -10,13 +10,13 @@
       "id": 2,
       "text": "Darle de comer a las mascotas",
       "day": "Agosto 5 a las 17:00",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
       "text": "Investigar Bootstrap",
       "day": "Agosto 5 a las 20:00",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 4,
@@ -28,7 +28,13 @@
       "id": 5,
       "text": "Terminar el proyecto",
       "day": "Agosto 5 a las 22:00",
-      "reminder": true
+      "reminder": false
+    },
+    {
+      "text": "Comprar la cena",
+      "day": "Octubre 15 a las 13:00",
+      "reminder": true,
+      "id": 6
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faTachographDigital } from '@fortawesome/free-solid-svg-icons';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../Task';
 
@@ -28,10 +29,18 @@ export class TasksComponent implements OnInit {
     })
   }
 
-  //Cambio el valor del reminder desde el front, no estoy actualizando la db!
   toggleReminder(task: Task): void {
+    //Cambio el valor del reminder desde el front, no estoy actualizando la db!
     task.reminder = !task.reminder;
-    // console.log(task.reminder); 
+    //Aqui llamo al servicio y actualizo la db
+    this.taskService.updateTaskReminder(task).subscribe();
   }
 
+  addTask(task: Task): void {
+    this.taskService.addTask(task).subscribe((task) => {
+      this.tasks.push(task);
+    });
+  }
+  
+  
 }

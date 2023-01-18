@@ -1,7 +1,13 @@
+<!-- teoria: al capturar el EventEmmiter de add-task debo hacerlo a traves de la variable $event -->
+<!-- teoria: en onDeleteTask y onToggleReminder podria usar la variable 'task' (del *ngFor) que ya esta definida y funcionaria igual -->
+<app-add-task
+    (onAddTask)="addTask($event)" 
+>
+</app-add-task>
 <app-tasks-item 
     *ngFor="let task of tasks"
-    [task] = "task"
-    (onDeleteTask)="deleteTask(task)"
-    (onToggleReminder)="toggleReminder(task)"
+    [task] ="task"
+    (onDeleteTask)="deleteTask($event)"
+    (onToggleReminder)="toggleReminder($event)"
 >
 </app-tasks-item>
